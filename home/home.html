@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>Hubkut | Home</title>
+  </head>
+  <body>
+    <header>
+      <div class="containerHeader">
+        <div class="logo">
+          <a href="./home.html">
+            <img src="../assets/hubkut-logo.svg" alt="Logo Hubkut" />
+          </a>
+        </div>
+
+        <nav>
+          <ul>
+            <li>
+              <a id="inicio" href="./home.html">Início</a>
+            </li>
+            <li>
+              <a href="https://github.com/pulls" target="_blank"
+                >Pull Requests</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/issues" target="_blank">Issues</a>
+            </li>
+            <li>
+              <a href="https://github.com/marketplace" target="_blank"
+                >Marketplace</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/explore" target="_blank">Explore</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="logout">
+          <a href="../index.html">Sai</a>
+        </div>
+
+        <div class="findUser">
+          <form>
+            <input
+              type="text"
+              name="findUserHubkut"
+              id="findUserHubkut"
+              placeholder="Pesquisar no Hubkut"
+              autocomplete="off"
+            />
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="containerMain">
+        <aside>
+          <div class="imgProfile">
+            <img id="imgProfileGit" src="" alt="Foto Perfil" />
+          </div>
+
+          <div class="infoBio">
+            <h4 id="nameBio"></h4>
+            <p id="infoBio"></p>
+          </div>
+
+          <div class="infoSocial">
+            <div class="building">
+              <img src="../assets/building.svg" alt="Ícone edifício" />
+              <p id="building"></p>
+            </div>
+
+            <div class="map">
+              <img src="../assets/pin.svg" alt="Ícone mapa" />
+              <p id="map"></p>
+
+            </div>
+
+            <div class="email">
+              <img src="../assets/email.svg" alt="Ícone email" />
+              <a id="email" href="mailto:joaosam.dev@gmail.com" target="_blank"
+                ></a
+              >
+            </div>
+
+            <div class="portfolio">
+              <img src="../assets/url.svg" alt="Ícone portfolio" />
+              <a id="portfolio" href="https://joaosam.github.io/PortfolioPage/" target="_blank"
+                ></a
+              >
+            </div>
+          </div>
+
+          <div class="infoOrganization">
+            <p>Organizações</p>
+
+            <div class="rocketseat">
+              <img src="../assets/rocketseat.svg" alt="ícone organização" /><a
+                href="https://www.rocketseat.com.br/"
+                target="_blank"
+                >rocketseat</a
+              >
+            </div>
+
+            <div class="rocketseat">
+              <img src="../assets/rocketseat.svg" alt="ícone organização" /><a
+                href="https://www.rocketseat.com.br/"
+                target="_blank"
+                >rocketseat</a
+              >
+            </div>
+
+            <div class="rocketseat">
+              <img src="../assets/rocketseat.svg" alt="ícone organização" /><a
+                href="https://www.rocketseat.com.br/"
+                target="_blank"
+                >rocketseat</a
+              >
+            </div>
+
+            <div class="rocketseat">
+              <img src="../assets/rocketseat.svg" alt="ícone organização" /><a
+                href="https://www.rocketseat.com.br/"
+                target="_blank"
+                >rocketseat</a
+              >
+            </div>
+          </div>
+        </aside>
+
+        <div class="hero">
+          <section class="welcome">
+            <h1>Bem-vindo(a), <span id="loginProfile"></span></h1>
+
+            <p>
+              <span>Sorte de hoje</span>: Cada sonho que você deixa pra trás, é
+              um pedaço do seu futuro que deixa de existir.
+            </p>
+
+            <div class="welcomeInfos">
+              <div class="repos">
+                <p>Repositórios</p>
+                <div class="welcomeMedia">
+                  <img
+                    src="../assets/repos.svg"
+                    alt="Ícone repositórios github"
+                  />
+                  <p id="repositories"
+                    ></p
+                  >
+                </div>
+              </div>
+
+              <div class="favorites">
+                <p>Favoritos</p>
+                <div class="welcomeMedia">
+                  <img src="../assets/stars.svg" alt="Ícone favoritos github" />
+                  <p id="favorites">15</p
+                  >
+                </div>
+              </div>
+
+              <div class="followers">
+                <p>Seguidores</p>
+                <div class="welcomeMedia">
+                  <img
+                    src="../assets/followers.svg"
+                    alt="Ícone seguidores github"
+                  />
+                  <p id="followers"
+                    ></p
+                  >
+                </div>
+              </div>
+
+              <div class="following">
+                <p>Seguindo</p>
+                <div class="welcomeMedia">
+                  <img src="../assets/book.svg" alt="Ícone seguindo github" />
+                  <p id="following"
+                    ></p
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="mainActions">
+            <div class="description">
+              <h3>O que deseja fazer?</h3>
+            </div>
+
+            <div class="hubKutActions">
+              <ul>
+                <li>Criar Repositório</li>
+                <li>Importar Repositório</li>
+                <li>Novo Gist</li>
+                <li>Nova Organização</li>
+                <li>Novo Proj</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="lastRepositores">
+            <h3>Meus últimos repositórios:</h3>
+
+            <div class="containerRepositores">
+              <div class="repositores">
+                <div class="repDescription">
+                  <img src="../assets/repos.svg" alt="Ícone repositórios">
+                  <a href="#">Joaosam/Teste</a>
+                    <p>Bio teste</p>
+                </div>
+
+                <div class="containerFav">
+                  <div class="favRepos">
+                    <img src="../assets/stars.svg" alt="Ícone favoritos">
+                    <p>Star</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="repositores">
+                <div class="repDescription">
+                  <img src="../assets/repos.svg" alt="Ícone repositórios">
+                  <a href="#">Joaosam/Teste 2</a>
+                  <p>Bio teste</p>
+                </div>
+
+                <div class="containerFav">
+                  <div class="favRepos">
+                    <img src="../assets/stars.svg" alt="Ícone favoritos">
+                    <p>Star</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="repositores">
+                <div class="repDescription">
+                  <img src="../assets/repos.svg" alt="Ícone repositórios">
+                  <a href="#">Joaosam/Teste 30</a>
+                  <p>Bio teste</p>
+                </div>
+
+                <div class="containerFav">
+                  <div class="favRepos">
+                    <img src="../assets/stars.svg" alt="Ícone favoritos">
+                    <p>Star</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="repositores">
+                <div class="repDescription">
+                  <img src="../assets/repos.svg" alt="Ícone repositórios">
+                  <a href="#">Joaosam/Teste 400</a>
+                  <p>Bio teste</p>
+                </div>
+
+                <div class="containerFav">
+                  <div class="favRepos">
+                    <img src="../assets/stars.svg" alt="Ícone favoritos">
+                    <p>Star</p>
+                  </div>
+                </div>
+              </div>                       
+            </div>
+          </section>
+        </div>
+
+          <section class="follow">
+            <div class="containerFollowing">
+              <div class="header">
+                <h4>Seguindo</h4>
+                <p id="numberFollowing"></p>
+              </div>
+              <div class="picturesFollowing">
+                <ul>
+                  <li><img id="following0" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="following1" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="following2" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="following3" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="following4" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="following5" src="" alt="Foto de perfil de usuários"></li>             
+                </ul>
+  
+                <a id="viewAllFollowing" href="https://github.com/Joaosam?tab=following" target="_blank">Ver todos</a>
+              </div>
+            </div>
+
+            <div class="containerFollowers">
+              <div class="header">
+                <h4>Seguidores</h4>
+                <p id="numberFollowers"></p>
+              </div>
+              <div class="picturesFollowers">
+                <ul>
+                  <li><img id="follower0" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="follower1" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="follower2" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="follower3" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="follower4" src="" alt="Foto de perfil de usuários"></li>
+                  <li><img id="follower5" src="" alt="Foto de perfil de usuários"></li>             
+                </ul>
+  
+                <a id="viewAllFollowers" href="https://github.com/Joaosam?tab=followers" target="_blank">Ver todos</a>
+              </div>
+            </div>    
+          </section>
+      </div>
+
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="../main.js"></script> 
+</html>
