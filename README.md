@@ -24,7 +24,7 @@
 
 ## 🚧 Projeto
 
-Live Preview: https://hubkut.vercel.app/
+Live Preview: https://joaosam.github.io/Hubkut/
 
 ## 🎨 Layout:
 
