@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 65.5%;
+
+  --bg-body: hsl(213, 62%, 91%);
+  --bg-body-dark: hsl(40, 6%, 9%);
+
+  --bg-welcome: hsl(0, 0%, 100%);
+  --text-dark: hsl(216, 28%, 93%);
+  --bg-welcome-dark: hsl(36, 7%, 13%);
+
+  --bg-login: hsl(203, 87%, 97%);
+  --bg-login-dark : hsl(36, 7%, 13%);
+
+  --bg-button: hsl(206, 59%, 44%);
+  --bg-button-hover: hsl(206, 65%, 35%);
+  --bg-footer: hsl(216, 49%, 82%);
+
+  --text-pink: hsl(328, 85%, 54%);
+  --text-login: hsl(0, 0%, 35%);
+  --text-placeholder-input: hsl(0, 0%, 45%);
+
+  --border-login: hsl(228, 5%, 78%);
+
+  --link-footer: hsl(206, 59%, 44%);
+}
+
+body {
+  background-color: var(--bg-body);
+  font-family: 'Rubik', sans-serif;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: 150ms linear;
+}
+
+.iconChangeTheme {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 3.1rem;
+  height: 3.1rem;
+
+  background: url(./assets/moon.svg) no-repeat;
+
+  cursor: pointer;
+
+  transition: 150ms linear;
+}
+
+.iconChangeTheme:hover {
+  transform: scale(1.2);
+  transition: 350ms linear;
+}
+
+/* HOME */
+.home {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.welcome {
+  background-color: var(--bg-welcome);
+  border-radius: 0.8rem;
+
+  width: 73.9rem;
+  height: 36.8rem;
+
+  text-align: center;
+
+  transition: 150ms linear;
+}
+
+.logo {
+  margin: 10.8rem 23.4rem 1.5rem;
+}
+
+.description p {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+
+.description p:nth-child(4) {
+  margin-bottom: 9.7rem;
+}
+
+.description p + p {
+  margin-top: 0.5rem;
+}
+
+.description p span {
+  color: var(--text-pink);
+  font-weight: bold; 
+  font-size: 1.2rem; 
+  line-height: 1.4rem;
+}
+
+/* LOGIN */
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--bg-login);
+
+  border-radius: 0.8rem;
+
+  width: 35.9rem;
+  height: 36.8rem;
+
+  transition: 150ms linear;
+}
+
+.login img {
+  margin-top: 1.5rem;
+  margin-bottom: 2.43rem;
+}
+
+.login p {
+  width: 17.4rem;
+  height: 3.4rem;
+
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  text-align: center;
+
+  margin-bottom: 2.4rem;
+}
+
+.login p span {
+  color: var(--text-login);
+
+  font-weight: bold;
+}
+
+.login input {
+  background-color: white;
+  color: var(--text-placeholder-input);
+
+  width: 20.9rem;
+  height: 3.2rem;
+
+  border: 1px solid var(--border-login);
+  border-radius: 0.8rem;
+  outline: none;
+
+  padding-left: 1.6rem;
+
+  margin-bottom: 1.6rem;
+}
+
+.login input:focus {
+  border: 2px solid var(--text-pink);
+}
+
+.login button {
+  background-color: var(--bg-button);
+  color: white;
+
+  font-weight: bold;
+
+  border: none;
+  border-radius: 0.8rem;
+
+  width: 20.9rem;
+  height: 3.3rem;
+
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: var(--bg-button-hover);
+  transition: 150ms linear;
+}
+
+
+/* FOOTER */
+footer {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--bg-footer);
+
+  margin-top: 1.6rem;
+
+  padding: 1rem;
+
+  border: none;
+  border-radius: 0.8rem;
+
+  font-size: 1.2rem;
+  
+  transition: 150ms linear;
+}
+
+footer p {
+  margin-right: 0.5rem;
+}
+
+footer ul {
+  display: flex;
+  gap: 0.5rem;
+
+  list-style: none;
+}
+
+footer li::before {
+  content: '-';
+  padding: 0.5rem;
+}
+
+footer a {
+  text-decoration: none;
+
+  color: var(--link-footer);
+}
+
+footer a:hover {
+  filter: brightness(0.7);
+}
+
+/* ========== SWALL ========== */
+.swal-modal {
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.swal-overlay--show-modal .swal-modal {
+  animation: showSweetAlert .500ms;
+}
+
+.swal-button {
+  background-color: var(--bg-button);
+
+  border-radius: 0.8rem;
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: var(--bg-button-hover);
+}
+
+.swal-icon--error {
+  border-color: var(--text-pink);
+}
+
+.swal-icon--error__line {
+  background-color: var(--text-pink);
+}
+
+/* ========== DARK THEME ========== */
+body.darkTheme {
+  background-color: var(--bg-body-dark);
+}
+
+body.darkTheme .iconChangeTheme {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 3.1rem;
+  height: 3.1rem;
+
+  background: url(./assets/sun.svg) no-repeat;
+
+  cursor: pointer;
+}
+
+body.darkTheme .welcome {
+  background-color: var(--bg-welcome-dark);
+  color: var(--text-dark);
+}
+
+body.darkTheme .login {
+  background-color: var(--bg-login-dark);
+  color: var(--text-dark);
+}
+
+body.darkTheme .login span {
+  color: var(--text-dark);
+}
+
+body.darkTheme footer {
+  background-color: var(--bg-welcome-dark);
+}
+
+body.darkTheme footer p {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+body.darkTheme footer a {
+  color: var(--text-dark);
+}
+
+body.darkTheme footer a:hover {
+  filter: brightness(5);
+
+  font-weight: 500;
+}
+
+body.darkTheme .swal-modal {
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.8rem;
+}
+
+body.darkTheme .swal-title,
+body.darkTheme .swal-text {
+  color: var(--text-dark);
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 480px) {
+
+body {
+  width: 100vw;
+  height: 100vh; 
+}
+
+ .iconChangeTheme {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  width: 3.1rem;
+  height: 3.1rem;
+
+  cursor: pointer;
+}
+
+ .home {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .welcome {
+   width: min(34.5rem, 100%);
+   height: 26.3rem;
+
+   margin-inline: 1.5rem;
+ }
+
+ .logo {
+  width: 20rem;
+  height: 7.4rem;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 5.8rem 7.3rem 2.7rem;
+ }
+
+ .description p {
+   font-size: 1rem;
+   line-height: 1.2rem;
+ }
+
+ .description p + p {
+   margin-top: 1.5rem;
+ }
+
+ .login {
+   width: 34.5rem;
+   height: 34rem;  
+ }
+
+ footer {
+   width: 34.5rem;
+   height: 5.6rem;
+
+   margin-inline: 1.5rem;
+   padding: 1.4rem 1.8rem;
+  }
+
+  footer ul {
+    width: 30.9rem;
+
+    display: flex;
+  }
+
+  footer p,
+  footer li {
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+  }
+}
+ 

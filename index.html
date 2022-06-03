@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <title>Hubkut | Login</title>
+  </head>
+  <body>
+    <div onclick="changeTheme()" class="iconChangeTheme"></div>
+
+    <div class="container">
+      <div class="home">
+        <section class="welcome">
+          <div class="logo">
+            <img src="./assets/hubkut-logo.svg" alt="Logo Hubkut" />
+          </div>
+
+          <div class="description">
+            <p>
+              <span>Siga</span> amigos e outros devs do seu interesse usando o
+              botão seguir
+            </p>
+            <p>
+              <span>Conheça</span> novos devs e repositórios através da aba
+              explorar
+            </p>
+            <p><span>Compartilhe</span> ideias e soluções em um só lugar</p>
+          </div>
+        </section>
+
+        <section class="login">
+          <img src="./assets/code.svg" alt="Ilustração homem programando" />
+
+          <p>Acesse o <span>hubkut</span> com o seu usuário do Github</p>
+
+          <form>
+            <input
+              type="text"
+              name="userGithub"
+              id="userGithub"
+              placeholder="Digite seu usuário"
+              autocomplete="off"
+            />
+          </form>
+
+          <button onclick="login()" type="button" form="userGithub">
+            Login
+          </button>
+        </section>
+      </div>
+
+      <footer>
+        <p>© 2022 Hubkut</p>
+
+        <ul>
+          <li><a href="#">Sobre o Hubkut</a></li>
+          <li><a href="#">Centro de segurança</a></li>
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Termos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="main.js"></script>
+</html>
