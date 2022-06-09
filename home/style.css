@@ -218,11 +218,11 @@ h3 {
 aside {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; 
 
   width: 16rem;
-  height: 54.5rem;
-  
+  height: 100%;
+
   padding-bottom: 2.4rem;
   
   background-color: white;
@@ -308,6 +308,7 @@ aside > div:last-child::after {
 }
 
 .portfolio {
+  word-break: break-word;
   display: flex;
   align-items: center;
 
@@ -326,7 +327,6 @@ aside > div:last-child::after {
   color: var(--text-description-bio);
 
   padding-top: 1.4rem;
-
 }
 
 .infoOrganization a {
