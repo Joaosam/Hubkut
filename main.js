@@ -42,14 +42,31 @@ function verifyOrganization(apiOrganization) {
           .then(responseOrg => responseOrg.json())
           .then(payloadOrg => {
             console.log(payloadOrg)
-            let bla = (organization.textContent = payloadOrg.name)
-            console.log(bla)
+            organization.textContent = payloadOrg.name
           })
-        imgOrganization.src = data[i].avatar_url
       }
     })
 }
 
+function generatePhrase() {
+  const phrases = [
+    'Não importa que você vá devagar, contanto que você não pare.',
+    'Cada sonho que você deixa pra trás, é um pedaço do seu futuro que deixa de existir.',
+    'A inspiração existe, porém temos que encontrá-la trabalhando.',
+    'Coragem é saber o que não temer.',
+    'Conhecer a si mesmo é o começo de toda sabedoria.',
+    'Acredite em milagres, mas não dependa deles.',
+    'Não é a carga que o derruba, mas a maneira como você a carrega.',
+    'A vida é 10% o que acontece a você e 90% como você reage a isso.',
+    'A felicidade não é algo pronto. Ela é feita das suas próprias ações.',
+    'Mude o modo que você olha para as coisas, e as coisas que você olha mudarão.'
+  ]
+
+  const randomPhrase = Math.floor(Math.random() * phrases.length)
+  let phraseElement = document.querySelector('#quoteOfTheDay')
+  phraseElement.innerHTML = phrases[randomPhrase]
+}
+generatePhrase()
 // Nessa função permito a repetição de números, isso implica na repetição de pessoas que o usuário segue
 function setRandomUsersFollowing(maxNumbers, data) {
   for (cont = 0; cont <= 5; cont++) {

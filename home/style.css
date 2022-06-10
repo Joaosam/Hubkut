@@ -365,7 +365,7 @@ aside > div:last-child::after {
   color: var(--tittle-welcome);
 }
 
-.welcome > p {
+.containerPhrase {
   width: 56.6rem;
   margin-block: 3rem;
 
@@ -375,8 +375,9 @@ aside > div:last-child::after {
   color: var(--text-description-bio);
 }
 
-.welcome p > span {
+.welcome div > span {
   font-weight: 700;
+  margin-right: 0.3rem;
 }
 
 .welcomeInfos {
