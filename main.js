@@ -32,6 +32,24 @@ function login() {
   }
 }
 
+function verifyOrganization(apiOrganization) {
+  fetch(apiOrganization)
+    .then(responseAPI => responseAPI.json())
+    .then(data => {
+      for (i = 0; i <= data.length; i++) {
+        let apiOrg = data[i].url
+        fetch(apiOrg)
+          .then(responseOrg => responseOrg.json())
+          .then(payloadOrg => {
+            console.log(payloadOrg)
+            let bla = (organization.textContent = payloadOrg.name)
+            console.log(bla)
+          })
+        imgOrganization.src = data[i].avatar_url
+      }
+    })
+}
+
 // Nessa função permito a repetição de números, isso implica na repetição de pessoas que o usuário segue
 function setRandomUsersFollowing(maxNumbers, data) {
   for (cont = 0; cont <= 5; cont++) {
@@ -120,13 +138,16 @@ function getUrlGitHub() {
         repositories.textContent = data.public_repos
         building.textContent = data.company
         map.textContent = data.location
-        email.textContent = data.email
         portfolio.textContent = data.blog
 
         inicio.href = `./home.html?findUserHubkut=${userGithub}`
         viewAllFollowing.href = `https://github.com/${userGithub}?tab=following`
         viewAllFollowers.href = `https://github.com/${userGithub}?tab=followers`
         portfolio.href = data.blog
+
+        // Organization
+        const apiOrganization = `https://api.github.com/users/${userGithub}/orgs`
+        verifyOrganization(apiOrganization)
 
         // Seguindo
         const nFollowing = data.following

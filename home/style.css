@@ -320,7 +320,7 @@ aside > div:last-child::after {
   width: 90%;
 }
 
-.infoOrganization p {
+.infoOrganization > p {
   font-weight: 700;
   font-size: 1.3rem;
 
@@ -329,7 +329,7 @@ aside > div:last-child::after {
   padding-top: 1.4rem;
 }
 
-.infoOrganization a {
+.infoOrganization p {
   padding-left: 0.5rem;
 
   text-decoration: none;
@@ -338,7 +338,19 @@ aside > div:last-child::after {
   color: var(--text-primary);
 }
 
-.rocketseat {
+.organization p:last-child {
+  color: var(--text-primary);
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+}
+
+#imgOrganization {
+  border-radius: 0.8rem;
+}
+
+.organization {
   display: flex;
   align-items: center;
 
