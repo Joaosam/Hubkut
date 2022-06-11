@@ -318,6 +318,7 @@ aside > div:last-child::after {
 /* ===== INFO ORGANIZATION ===== */
 .infoOrganization {
   width: 90%;
+  word-break: break-all;
 }
 
 .infoOrganization > p {
@@ -329,32 +330,45 @@ aside > div:last-child::after {
   padding-top: 1.4rem;
 }
 
-.infoOrganization p {
+/* .infoOrganization p {
   padding-left: 0.5rem;
 
   text-decoration: none;
   font-size: 1.2rem;
 
   color: var(--text-primary);
-}
+} */
 
-.organization p:last-child {
+/* .organization p:last-child {
   color: var(--text-primary);
-  font-weight: 700;
 
   display: flex;
   align-items: center;
-}
+} */
 
 #imgOrganization {
   border-radius: 0.8rem;
 }
 
-.organization {
+#divOrganization {
   display: flex;
   align-items: center;
 
+  padding-left: 0.5rem;
+
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  color: var(--text-primary);
+
   padding-top: 1.8rem;
+}
+
+/* ========== DYNAMIC ORGANIZATION ========== */
+#organization > img,
+#organization > p {
+  display: block;
+  border: 2px solid red;
 }
 
 /* ========== WELCOME ========== */

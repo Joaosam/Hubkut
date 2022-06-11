@@ -36,14 +36,34 @@ function verifyOrganization(apiOrganization) {
   fetch(apiOrganization)
     .then(responseAPI => responseAPI.json())
     .then(data => {
-      for (i = 0; i <= data.length; i++) {
-        let apiOrg = data[i].url
-        fetch(apiOrg)
-          .then(responseOrg => responseOrg.json())
-          .then(payloadOrg => {
-            console.log(payloadOrg)
-            organization.textContent = payloadOrg.name
-          })
+      if (data.length > 0) {
+        for (i = 0; i < data.length; i++) {
+          const apiOrg = data[i].url
+          fetch(apiOrg)
+            .then(responseOrg => responseOrg.json())
+            .then(payloadOrg => {
+              if (data.length == 1) {
+                organization.textContent = payloadOrg.name
+                imgOrganization.src = payloadOrg.avatar_url
+              } else {
+                const div = document.getElementById('organization')
+                createImg(payloadOrg, div)
+                createParagraph(payloadOrg, div)
+              }
+            })
+        }
+
+        function createImg(payloadOrg, div) {
+          const img = document.createElement('img')
+          img.src = payloadOrg.avatar_url
+          div.appendChild(img)
+        }
+
+        function createParagraph(payloadOrg, div) {
+          const paragraph = document.createElement('p')
+          paragraph.textContent = payloadOrg.name
+          div.appendChild(paragraph)
+        }
       }
     })
 }
