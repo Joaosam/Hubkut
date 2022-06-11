@@ -330,22 +330,6 @@ aside > div:last-child::after {
   padding-top: 1.4rem;
 }
 
-/* .infoOrganization p {
-  padding-left: 0.5rem;
-
-  text-decoration: none;
-  font-size: 1.2rem;
-
-  color: var(--text-primary);
-} */
-
-/* .organization p:last-child {
-  color: var(--text-primary);
-
-  display: flex;
-  align-items: center;
-} */
-
 #imgOrganization {
   border-radius: 0.8rem;
 }
@@ -354,7 +338,7 @@ aside > div:last-child::after {
   display: flex;
   align-items: center;
 
-  padding-left: 0.5rem;
+  gap: 0.5rem;
 
   text-decoration: none;
   font-size: 1.2rem;
@@ -367,8 +351,7 @@ aside > div:last-child::after {
 /* ========== DYNAMIC ORGANIZATION ========== */
 #organization > img,
 #organization > p {
-  display: block;
-  border: 2px solid red;
+  display: flex;
 }
 
 /* ========== WELCOME ========== */
