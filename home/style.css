@@ -349,10 +349,10 @@ aside > div:last-child::after {
 }
 
 /* ========== DYNAMIC ORGANIZATION ========== */
-#organization > img,
+/* #organization > img,
 #organization > p {
   display: flex;
-}
+} */
 
 /* ========== WELCOME ========== */
 .welcome h1 {

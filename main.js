@@ -42,28 +42,56 @@ function verifyOrganization(apiOrganization) {
           fetch(apiOrg)
             .then(responseOrg => responseOrg.json())
             .then(payloadOrg => {
-              if (data.length == 1) {
-                organization.textContent = payloadOrg.name
-                imgOrganization.src = payloadOrg.avatar_url
-              } else {
-                const div = document.getElementById('organization')
-                createImg(payloadOrg, div)
-                createParagraph(payloadOrg, div)
-              }
+              const infoOrg = document.getElementById('infoOrganization')
+              const divOrg = document.getElementById('divOrganization')
+
+              createContent(payloadOrg, infoOrg, divOrg)
             })
         }
 
-        function createImg(payloadOrg, div) {
-          const img = document.createElement('img')
-          img.src = payloadOrg.avatar_url
-          div.appendChild(img)
-        }
+        function createContent(payloadOrg, infoOrg, divOrg) {
+          const cloneDivOrg = document.createElement('div')
+          cloneDivOrg.id = 'divOrganization'
+          console.log(cloneDivOrg)
 
-        function createParagraph(payloadOrg, div) {
-          const paragraph = document.createElement('p')
-          paragraph.textContent = payloadOrg.name
-          div.appendChild(paragraph)
+          // Get imagem
+          const cloneImg = document.createElement('img')
+          cloneImg.id = 'imgOrganization'
+          cloneImg.src = payloadOrg.avatar_url
+          //No elemento cloneDivOrg adiciono o cloneImg
+          cloneDivOrg.appendChild(cloneImg)
+
+          // Get nome
+          const cloneP = document.createElement('p')
+          cloneP.id = 'organization'
+          cloneP.textContent = payloadOrg.name
+          cloneDivOrg.appendChild(cloneP)
+
+          // No infoOrg adiciono o cloneDivOrg
+          infoOrg.appendChild(cloneDivOrg)
         }
+      } else {
+        const infoOrg = document.getElementById('infoOrganization')
+
+        const cloneDivOrg = document.createElement('div')
+        cloneDivOrg.id = 'divOrganization'
+        console.log(cloneDivOrg)
+
+        // Get imagem
+        const cloneImg = document.createElement('img')
+        cloneImg.id = 'imgOrganization'
+        cloneImg.src = '../assets/rocketseat.svg'
+        //No elemento cloneDivOrg adiciono o cloneImg
+        cloneDivOrg.appendChild(cloneImg)
+
+        // Get nome
+        const cloneP = document.createElement('p')
+        cloneP.id = 'organization'
+        cloneP.textContent = 'Rocketseat'
+        cloneDivOrg.appendChild(cloneP)
+
+        // No infoOrg adiciono o cloneDivOrg
+        infoOrg.appendChild(cloneDivOrg)
       }
     })
 }
