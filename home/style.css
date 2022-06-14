@@ -188,7 +188,6 @@ main {
   width: 100%;
   
   display: flex;  
-  /* align-items: center; */
   justify-content: flex-start;
 }
 
@@ -427,19 +426,25 @@ aside > div:last-child::after {
   padding: 0.9rem 1.2rem;
   border-radius: 0.8rem;
 
-  background-color: var(--bg-ul-main);
-  color: var(--text-primary);
-
-  cursor: pointer;
+  background-color: var(--bg-ul-main);  
 }
 
 .mainActions li:hover {
   background-color: var(--bg-ul-main-hover);
-  color: white;
 
-  transition: 100ms linear;
+  transition: 150ms linear;
 
   cursor: pointer;
+}
+
+.mainActions li a {
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.mainActions li:hover a {
+  transition: 150ms linear;
+  color: white;
 }
 
 /* ========== LAST REPOSITORES ========== */
@@ -450,39 +455,59 @@ aside > div:last-child::after {
 .containerRepositores {
   background-color: var(--bg-body);
   border-radius: 0.8rem;
+
 }
 
 .repositores {
   width: 57.3rem;
-
+  
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: space-between; */
-
+  
+  position: relative;
+  
   padding-block: 1.4rem;
   padding-left: 1.2rem;
-
+  
   border-bottom: 1px solid white;
 }
 
-.repDescription {
+.repDescription {  
   width: 60%;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
+}
+
+.contentRepos {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  left: 1rem;
+  top: 1.5rem;
 }
 
 .repDescription p {
   color: var(--text-description-bio);
+  width: 80%;
+
+  position: absolute;
+  left: 1rem;
+  top: 3rem;
 }
 
 .repositores a {
   text-decoration: none;
 
-  margin-left: 0.3rem;
-
   color: var(--text-primary);
+  transition: filter 0.2s;
+}
+
+.repositores a:hover {
+  filter: brightness(1.2);
 }
 
 .containerFav {

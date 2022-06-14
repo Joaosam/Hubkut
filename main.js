@@ -52,7 +52,6 @@ function verifyOrganization(apiOrganization) {
         function createContent(payloadOrg, infoOrg, divOrg) {
           const cloneDivOrg = document.createElement('div')
           cloneDivOrg.id = 'divOrganization'
-          console.log(cloneDivOrg)
 
           // Get imagem
           const cloneImg = document.createElement('img')
@@ -75,7 +74,6 @@ function verifyOrganization(apiOrganization) {
 
         const cloneDivOrg = document.createElement('div')
         cloneDivOrg.id = 'divOrganization'
-        console.log(cloneDivOrg)
 
         // Get imagem
         const cloneImg = document.createElement('img')
@@ -115,6 +113,20 @@ function generatePhrase() {
   phraseElement.innerHTML = phrases[randomPhrase]
 }
 generatePhrase()
+
+function latestRepositories(lastRepositories) {
+  fetch(lastRepositories)
+    .then(responseAPI => responseAPI.json())
+    .then(data => {
+      for (i = 0; i < data.length; i++) {
+        document.getElementById(`nameRepos${i}`).textContent = data[i].full_name
+        document.getElementById(`nameRepos${i}`).href = data[i].html_url
+        document.getElementById(`bioRepos${i}`).textContent =
+          data[i].description
+      }
+    })
+}
+
 // Nessa função permito a repetição de números, isso implica na repetição de pessoas que o usuário segue
 function setRandomUsersFollowing(maxNumbers, data) {
   for (cont = 0; cont <= 5; cont++) {
@@ -209,10 +221,15 @@ function getUrlGitHub() {
         viewAllFollowing.href = `https://github.com/${userGithub}?tab=following`
         viewAllFollowers.href = `https://github.com/${userGithub}?tab=followers`
         portfolio.href = data.blog
+        newProjectHubkut.href = `https://github.com/${userGithub}?tab=projects`
 
         // Organization
         const apiOrganization = `https://api.github.com/users/${userGithub}/orgs`
         verifyOrganization(apiOrganization)
+
+        // Últimos repositórios
+        const lastRepositories = `https://api.github.com/users/${userGithub}/repos?sort=created&per_page=4`
+        latestRepositories(lastRepositories)
 
         // Seguindo
         const nFollowing = data.following
