@@ -432,7 +432,7 @@ aside > div:last-child::after {
 .mainActions li:hover {
   background-color: var(--bg-ul-main-hover);
 
-  transition: 150ms linear;
+  transition: 200ms linear;
 
   cursor: pointer;
 }
@@ -443,7 +443,7 @@ aside > div:last-child::after {
 }
 
 .mainActions li:hover a {
-  transition: 150ms linear;
+  transition: 200ms linear;
   color: white;
 }
 
