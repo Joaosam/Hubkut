@@ -700,12 +700,12 @@ body.darkTheme .containerRepositores {
 }
 
 body.darkTheme .repositores a {
-  filter: brightness(1.2);
+  filter: brightness(1.1);
   transition: filter 0.1s;
 }
 
 body.darkTheme .repositores a:hover {
-  filter: brightness(1.5);
+  filter: brightness(1.4);
 }
 
 body.darkTheme .favRepos {
