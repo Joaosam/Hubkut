@@ -221,7 +221,10 @@ function getUrlGitHub() {
         viewAllFollowing.href = `https://github.com/${userGithub}?tab=following`
         viewAllFollowers.href = `https://github.com/${userGithub}?tab=followers`
         portfolio.href = data.blog
-        newProjectHubkut.href = `https://github.com/${userGithub}?tab=projects`
+
+        // Novo projeto - Github
+        const newProject = document.getElementById('newProjectHubkut')
+        newProject.href = `https://github.com/${userGithub}?tab=projects`
 
         // Organization
         const apiOrganization = `https://api.github.com/users/${userGithub}/orgs`
