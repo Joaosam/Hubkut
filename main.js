@@ -114,6 +114,28 @@ function generatePhrase() {
 }
 generatePhrase()
 
+function starredRepos(apiStarredRepos) {
+  fetch(apiStarredRepos).then(responseAPI => {
+    const getHeadersLink = responseAPI.headers.get('link')
+    if (getHeadersLink) {
+      const splitIndex = getHeadersLink.split(',')
+      splitIndex.forEach((currentValue, index) => {
+        if (index == 1) {
+          const getNumbersStarred = currentValue.split('&page=')[1].split('>')
+          favorites.textContent = getNumbersStarred[0]
+        }
+      })
+    } else {
+      const getHeadersLength = responseAPI.headers.get('Content-Length')
+      if (getHeadersLength != 5) {
+        favorites.textContent = '1'
+      } else {
+        favorites.textContent = '0'
+      }
+    }
+  })
+}
+
 function latestRepositories(lastRepositories) {
   fetch(lastRepositories)
     .then(responseAPI => responseAPI.json())
@@ -221,6 +243,11 @@ function getUrlGitHub() {
         viewAllFollowing.href = `https://github.com/${userGithub}?tab=following`
         viewAllFollowers.href = `https://github.com/${userGithub}?tab=followers`
         portfolio.href = data.blog
+
+        // Repositórios favoritos
+        const page = 1
+        const apiStarredRepos = `https://api.github.com/users/${userGithub}/starred?per_page=1`
+        starredRepos(apiStarredRepos)
 
         // Novo projeto - Github
         const newProject = document.getElementById('newProjectHubkut')
