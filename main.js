@@ -240,6 +240,7 @@ function getUrlGitHub() {
 
       if (response.status == 200) {
         const data = await response.json()
+        logo.href = `./home.html?findUserHubkut=${userGithub}`
         imgProfileGit.src = data.avatar_url
         nameBio.textContent = data.name
         infoBio.textContent = data.bio
