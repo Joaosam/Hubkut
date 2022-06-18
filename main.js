@@ -35,7 +35,7 @@ function login() {
 function verifyEmail(data) {
   if (data.email) {
     email.textContent = data.email
-    email.href = data.email
+    email.href = 'mailto:' + `${data}.email`
   }
 }
 
