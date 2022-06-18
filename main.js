@@ -32,6 +32,13 @@ function login() {
   }
 }
 
+function verifyEmail(data) {
+  if (data.email) {
+    email.textContent = data.email
+    email.href = data.email
+  }
+}
+
 function verifyOrganization(apiOrganization) {
   fetch(apiOrganization)
     .then(responseAPI => responseAPI.json())
@@ -237,6 +244,7 @@ function getUrlGitHub() {
         repositories.textContent = data.public_repos
         building.textContent = data.company
         map.textContent = data.location
+        verifyEmail(data)
         portfolio.textContent = data.blog
 
         inicio.href = `./home.html?findUserHubkut=${userGithub}`
