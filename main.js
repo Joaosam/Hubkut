@@ -39,6 +39,13 @@ function verifyEmail(data) {
   }
 }
 
+function verifyPortfolio(data) {
+  if (data.blog) {
+    portfolio.textContent = data.blog
+    portfolio.href = data.blog
+  }
+}
+
 function verifyOrganization(apiOrganization) {
   fetch(apiOrganization)
     .then(responseAPI => responseAPI.json())
@@ -245,12 +252,11 @@ function getUrlGitHub() {
         building.textContent = data.company
         map.textContent = data.location
         verifyEmail(data)
-        portfolio.textContent = data.blog
+        verifyPortfolio(data)
 
         inicio.href = `./home.html?findUserHubkut=${userGithub}`
         viewAllFollowing.href = `https://github.com/${userGithub}?tab=following`
         viewAllFollowers.href = `https://github.com/${userGithub}?tab=followers`
-        portfolio.href = data.blog
 
         // Repositórios favoritos
         const page = 1
