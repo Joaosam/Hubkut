@@ -732,6 +732,11 @@ body.darkTheme .swal-text {
     display: none;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .lastRepositores,
   .repositores,
   .mainActions,
