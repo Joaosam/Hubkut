@@ -721,3 +721,91 @@ body.darkTheme .swal-title,
 body.darkTheme .swal-text {
   color: var(--text-dark);
 }
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  nav,
+  aside,
+  .logout,
+  .findUser {
+    display: none;
+  }
+
+  .lastRepositores,
+  .repositores,
+  .mainActions,
+  .welcome {
+    width: 34.4rem;
+    margin-inline: 0;
+  }
+  
+  .logo {
+    margin-left: 1.6rem;
+  }
+
+  .containerHeader {
+    background: url(../assets/menu-button.svg) no-repeat;
+    background-position: right;
+    margin-right: 1.6rem;
+  }
+
+  main {
+    width: 34.4rem;
+    margin-top: 1.6rem;
+    margin-inline: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .welcome h1 {
+    font-size: 2.4rem;
+    width: 29.3rem;
+    height: 2.8rem;
+  }
+
+  .containerPhrase {
+    width: 29.4rem;
+    height: 3.1rem;
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  .welcomeInfos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .mainActions li { 
+    padding-inline: 2rem;
+  }
+
+  .repositores {
+    width: 29.6rem;
+  }
+
+  .containerFav {
+    width: 10rem;
+  }
+
+  .favRepos {
+    width: 7rem;
+    margin-right: 0;
+  }
+
+  .follow {
+    width: 34.4rem;
+    margin: 72rem 0 2rem -34.5rem;
+  }
+
+  .containerFollowing,
+  .containerFollowers {
+    width: initial;
+  }
+
+  .containerFollowing {
+    margin-bottom: 2rem;
+  }
+
+}

@@ -203,6 +203,10 @@ footer {
   transition: 150ms linear;
 }
 
+.containerFooter {
+  display: flex;
+}
+
 footer p {
   margin-right: 0.5rem;
 }
@@ -320,7 +324,7 @@ body.darkTheme .swal-text {
 
 /* ========== RESPONSIVE ========== */
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
 
 body {
   width: 100vw;
@@ -382,18 +386,21 @@ body {
    padding: 1.4rem 1.8rem;
   }
 
-  footer ul {
+  .containerFooter {
     width: 30.9rem;
+    height: 2.8rem;
+    padding-inline: 1.5rem;
 
     display: flex;
   }
 
-  footer p,
+  footer ul {
+    width: 100%;
+  }
+
   footer li {
     display: flex;
     align-items: center;
-
-    white-space: nowrap;
+    padding-inline: 0.2rem; 
   }
 }
- 
