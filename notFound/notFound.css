@@ -39,7 +39,6 @@ body {
   gap: 2rem;
 
   padding-block: 2rem;
-
 }
 
 .containerImg {
@@ -89,4 +88,23 @@ body.darkTheme {
 
 body.darkTheme .description {
   color: var(--text-dark);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {  
+  .container {
+    width: 85%;
+    max-width: 20rem;
+    margin-inline: auto;
+    margin-bottom: 30rem;
+  }
+  
+  .description P {
+   font-size: 2.5rem;
+  }
+
+ .containerImg img {
+  width: 35rem;
+  height: 35rem;
+ }
 }
