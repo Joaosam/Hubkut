@@ -777,6 +777,9 @@ body.darkTheme .swal-text {
     gap: 2rem;
   }
 
+  .mainActions {
+    margin-block: 2rem;
+  }
   .mainActions li { 
     padding-inline: 2rem;
   }
@@ -796,7 +799,16 @@ body.darkTheme .swal-text {
 
   .follow {
     width: 34.4rem;
-    margin: 72rem 0 2rem -34.5rem;
+    margin: 70rem 0 2rem -34.5rem;
+  }
+
+  .follow ul {
+    justify-content: center;
+  }
+
+  .follow .header,
+  .follow a {
+    margin-left: 1.7rem;
   }
 
   .containerFollowing,
