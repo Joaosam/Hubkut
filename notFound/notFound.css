@@ -100,11 +100,16 @@ body.darkTheme .description {
   }
   
   .description P {
+   margin-top: 100%;
    font-size: 2.5rem;
   }
 
  .containerImg img {
   width: 35rem;
-  height: 35rem;
+  height: 25rem;
+ }
+
+ .backHomePage {
+  margin-top: 5rem;
  }
 }
