@@ -738,17 +738,12 @@ body.darkTheme .swal-text {
     display: none;
   }
 
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
   .lastRepositores,
   .repositores,
   .mainActions,
   .welcome {
     width: 34.4rem;
-    margin-inline: 0;
+    margin-inline: auto;
   }
 
   .containerHeader {
@@ -780,8 +775,11 @@ body.darkTheme .swal-text {
   .containerPhrase {
     width: 29.4rem;
     height: 3.1rem;
+    align-items: center;
+    word-break: break-word;
     font-size: 1rem;
     line-height: 1.2rem;
+    margin-block: 2rem;
   }
 
   .welcomeInfos {
