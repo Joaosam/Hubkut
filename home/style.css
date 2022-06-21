@@ -771,10 +771,6 @@ body.darkTheme .swal-text {
     justify-content: center;
   }
 
-  .welcome {
-    margin-top: 15%;
-  }
-
   .welcome h1 {
     font-size: 2.4rem;
     width: 29.3rem;
@@ -830,6 +826,10 @@ body.darkTheme .swal-text {
 
   .containerFollowing {
     margin-bottom: 2rem;
+  }
+
+  body.darkTheme header {
+    filter: brightness(0.7);
   }
 
   /* ===== OPEN MENU ===== */
