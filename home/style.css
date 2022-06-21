@@ -793,8 +793,13 @@ body.darkTheme .swal-text {
   .mainActions {
     margin-block: 2rem;
   }
+
   .mainActions li { 
     padding-inline: 2rem;
+  }
+
+  .hubKutActions ul {
+    overflow-x: auto;
   }
 
   .repositores {
