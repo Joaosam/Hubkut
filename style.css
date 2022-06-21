@@ -331,6 +331,11 @@ body {
   height: 100vh; 
 }
 
+.container {
+  position: absolute;
+  top: 10%;
+}
+
  .iconChangeTheme {
   position: absolute;
   top: 1%;
@@ -348,8 +353,6 @@ body {
  .welcome {
    width: min(34.5rem, 100%);
    height: 26.3rem;
-
-   margin-top: 8rem;
  }
 
  .logo {
