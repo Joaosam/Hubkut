@@ -849,6 +849,7 @@ body.darkTheme .swal-text {
     visibility: visible;
     border-radius: initial;
     width: 100%;
+    height: auto;
     transition: visibility 3s;
   }
 
