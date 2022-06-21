@@ -93,6 +93,11 @@ nav {
   cursor: pointer;
 }
 
+#menuButton,
+#closeMenu {
+  display: none;
+}
+
 header ul {
   display: grid;
   grid-template-columns: repeat(5, 11.45rem);
@@ -724,11 +729,12 @@ body.darkTheme .swal-text {
 
 /* ===== RESPONSIVE ===== */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   nav,
-  aside,
   .logout,
-  .findUser {
+  .findUser,
+  aside,
+  #closeMenu {
     display: none;
   }
 
@@ -744,16 +750,18 @@ body.darkTheme .swal-text {
     width: 34.4rem;
     margin-inline: 0;
   }
-  
-  .logo {
-    margin-left: 1.6rem;
-  }
 
   .containerHeader {
-    background: url(../assets/menu-button.svg) no-repeat;
-    background-position: right;
-    margin-right: 1.6rem;
+    position: relative;
   }
+  
+  #menuButton {
+    display: initial;
+    position: absolute;
+    right: 1.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
+  } 
 
   main {
     width: 34.4rem;
@@ -761,6 +769,10 @@ body.darkTheme .swal-text {
     margin-inline: 1.5rem;
     display: flex;
     justify-content: center;
+  }
+
+  .welcome {
+    margin-top: 15%;
   }
 
   .welcome h1 {
@@ -807,13 +819,8 @@ body.darkTheme .swal-text {
     margin: 70rem 0 2rem -34.5rem;
   }
 
-  .follow ul {
-    justify-content: center;
-  }
-
-  .follow .header,
-  .follow a {
-    margin-left: 1.7rem;
+  .follow img {
+    width: 9.4rem;
   }
 
   .containerFollowing,
@@ -823,6 +830,41 @@ body.darkTheme .swal-text {
 
   .containerFollowing {
     margin-bottom: 2rem;
+  }
+
+  /* ===== OPEN MENU ===== */
+  body.menuExtended > main {
+    visibility: hidden;
+    margin: 0;
+    width: 100%;
+    transition: visibility 3s;
+  }
+
+  body.menuExtended .hero {
+    display: none;
+  }
+
+  body.menuExtended aside {
+    display: flex;
+    visibility: visible;
+    border-radius: initial;
+    width: 100%;
+    transition: visibility 3s;
+  }
+
+  body.menuExtended #closeMenu {
+    display: initial;
+    position: absolute;
+    right: 1.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    transition: opacity 3s;
+  } 
+  
+  body.menuExtended #menuButton {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 3s;
   }
 
 }

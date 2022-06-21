@@ -16,6 +16,16 @@ function changeTheme() {
   }
 }
 
+function showAside() {
+  const showMenu = document.body
+  showMenu.classList.add('menuExtended')
+}
+
+function hiddenAside() {
+  const closeMenu = document.body
+  closeMenu.classList.remove('menuExtended')
+}
+
 function login() {
   const user = document.getElementById('userGithub').value
   console.log('User:', user)
@@ -351,4 +361,4 @@ function getUrlGitHub() {
     makeRequest()
   }
 }
-getUrlGitHub()
+//getUrlGitHub()
