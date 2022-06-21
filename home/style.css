@@ -829,7 +829,7 @@ body.darkTheme .swal-text {
   }
 
   body.darkTheme header {
-    filter: brightness(0.7);
+    filter: brightness(0.6);
   }
 
   /* ===== OPEN MENU ===== */
@@ -837,7 +837,6 @@ body.darkTheme .swal-text {
     visibility: hidden;
     margin: 0;
     width: 100%;
-    transition: visibility 3s;
   }
 
   body.menuExtended .hero {
@@ -850,7 +849,6 @@ body.darkTheme .swal-text {
     border-radius: initial;
     width: 100%;
     height: auto;
-    transition: visibility 3s;
   }
 
   body.menuExtended #closeMenu {
@@ -859,13 +857,11 @@ body.darkTheme .swal-text {
     right: 1.5rem;
     width: 3.2rem;
     height: 3.2rem;
-    transition: opacity 3s;
   } 
   
   body.menuExtended #menuButton {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 3s;
   }
 
 }
