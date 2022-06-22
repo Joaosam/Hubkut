@@ -129,12 +129,15 @@ function generatePhrase() {
     'Não é a carga que o derruba, mas a maneira como você a carrega.',
     'A vida é 10% o que acontece a você e 90% como você reage a isso.',
     'A felicidade não é algo pronto. Ela é feita das suas próprias ações.',
-    'Mude o modo que você olha para as coisas, e as coisas que você olha mudarão.'
+    'Mude o modo que você olha para as coisas, e as coisas que você olha mudarão.',
+    'Cada segundo é tempo para mudar tudo para sempre.',
+    'Existe apenas um canto do universo que você pode ter certeza de aperfeiçoar, que é você mesmo.',
+    'Até cortar os próprios defeitos pode ser perigoso. Nunca se sabe qual é o defeito que sustenta nosso edifício inteiro.'
   ]
 
   const randomPhrase = Math.floor(Math.random() * phrases.length)
   let phraseElement = document.querySelector('#quoteOfTheDay')
-  phraseElement.innerHTML = phrases[randomPhrase]
+  phraseElement.innerHTML = `<span>Sorte do dia:</span> ${phrases[randomPhrase]}`
 }
 generatePhrase()
 

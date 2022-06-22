@@ -376,7 +376,7 @@ aside > div:last-child::after {
   color: var(--text-description-bio);
 }
 
-.welcome div > span {
+.containerPhrase span {
   font-weight: 700;
   margin-right: 0.3rem;
 }
@@ -471,9 +471,7 @@ aside > div:last-child::after {
   align-items: center;
   
   position: relative;
-  
-  padding-block: 1.4rem;
-  padding-left: 1.2rem;
+  padding: 1.4rem 0 2rem 1.2rem;
   
   border-bottom: 1px solid white;
 }
@@ -738,10 +736,15 @@ body.darkTheme .swal-text {
     display: none;
   }
 
-  .lastRepositores,
   .repositores,
   .mainActions,
   .welcome {
+    width: 34.4rem;
+    margin-inline: auto;
+  }
+
+  .lastRepositores {
+    height: auto;
     width: 34.4rem;
     margin-inline: auto;
   }
@@ -773,15 +776,19 @@ body.darkTheme .swal-text {
   }
 
   .containerPhrase {
-    width: 29.4rem;
+    display: inline-block;
+    width: 100%;
     height: 3.1rem;
     align-items: center;
-    word-break: break-word;
+    
     font-size: 1rem;
     line-height: 1.2rem;
     margin-block: 2rem;
   }
 
+  .containerPhrase span {
+    width: auto;
+  }
   .welcomeInfos {
     display: flex;
     justify-content: center;
@@ -802,6 +809,14 @@ body.darkTheme .swal-text {
 
   .repositores {
     width: 29.6rem;
+  }
+
+  .contentRepos {
+    width: 68%;
+  }
+
+  .repDescription p {
+    top: 4rem;
   }
 
   .containerFav {
@@ -842,6 +857,10 @@ body.darkTheme .swal-text {
     width: 100%;
   }
 
+  body.menuExtended {
+    overflow-y: hidden;
+  }
+
   body.menuExtended .hero {
     display: none;
   }
@@ -849,6 +868,7 @@ body.darkTheme .swal-text {
   body.menuExtended aside {
     display: flex;
     visibility: visible;
+    opacity: 1;
     border-radius: initial;
     width: 100%;
     height: auto;
@@ -865,6 +885,10 @@ body.darkTheme .swal-text {
   body.menuExtended #menuButton {
     opacity: 0;
     visibility: hidden;
+  }
+
+  body.menuExtended .infoOrganization {
+    overflow-y: auto;
   }
 
 }
