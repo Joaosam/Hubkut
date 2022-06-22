@@ -218,9 +218,10 @@ footer ul {
   list-style: none;
 }
 
-footer li::before {
+footer a::before {
   content: '-';
   padding: 0.5rem;
+  color: black;
 }
 
 footer a {
@@ -324,7 +325,7 @@ body.darkTheme .swal-text {
 
 /* ========== RESPONSIVE ========== */
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 
 body {
   width: 100vw;
@@ -333,13 +334,18 @@ body {
 
 .container {
   position: absolute;
-  top: 10%;
+  top: 3rem;
 }
 
- .iconChangeTheme {
+.welcome {
+  position: relative;
+}
+
+ .iconChangeTheme,
+ body.darkTheme .iconChangeTheme {
   position: absolute;
-  top: 1%;
-  right: 1%;
+  top: 5%;
+  right: 1.5rem;
   width: 3.1rem;
   height: 3.1rem;
 }
@@ -381,27 +387,32 @@ body {
 
  footer {
    width: 34.5rem;
-   height: 5.6rem;
+   justify-content: flex-start;
 
-   margin-inline: 1.5rem;
-   padding: 1.4rem 1.8rem;
+   padding: 0;
+   margin-inline: 0;
+   margin-bottom: 3rem;
   }
 
   .containerFooter {
-    width: 30.9rem;
-    height: 2.8rem;
-    padding-inline: 1.5rem;
+    display: block;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
 
-    display: flex;
+  .containerFooter p {
+    display: inline-block;
+    width: auto;   
   }
 
   footer ul {
-    width: 100%;
+    display: flex;
   }
 
-  footer li {
+  /* footer li {
     display: flex;
     align-items: center;
     padding-inline: 0.2rem; 
-  }
+  } */
 }
