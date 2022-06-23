@@ -874,7 +874,7 @@ body.darkTheme .swal-text {
     height: 100vh;
   }
 
-  body.menuExtended #closeMenu {
+  body.menuExtended #closeMenu {    
     display: initial;
     position: absolute;
     right: 1.5rem;
