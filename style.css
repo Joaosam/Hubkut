@@ -409,10 +409,4 @@ body {
   footer ul {
     display: flex;
   }
-
-  /* footer li {
-    display: flex;
-    align-items: center;
-    padding-inline: 0.2rem; 
-  } */
 }

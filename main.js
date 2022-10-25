@@ -17,13 +17,8 @@ function changeTheme() {
 }
 
 function showAside() {
-  const showMenu = document.body
-  showMenu.classList.add('menuExtended')
-}
-
-function hiddenAside() {
-  const closeMenu = document.body
-  closeMenu.classList.remove('menuExtended')
+  const menu = document.body
+  menu.classList.toggle('menuExtended')
 }
 
 function login() {
@@ -68,6 +63,7 @@ function verifyOrganization(apiOrganization) {
             .then(payloadOrg => {
               const infoOrg = document.getElementById('infoOrganization')
               const divOrg = document.getElementById('divOrganization')
+              console.log(divOrg)
 
               createContent(payloadOrg, infoOrg, divOrg)
             })
@@ -95,6 +91,7 @@ function verifyOrganization(apiOrganization) {
         }
       } else {
         const infoOrg = document.getElementById('infoOrganization')
+        console.log(infoOrg)
 
         const cloneDivOrg = document.createElement('div')
         cloneDivOrg.id = 'divOrganization'
@@ -298,8 +295,6 @@ function getUrlGitHub() {
           // Gero números aleatórios em cima da quantidade de páginas disponíveis da API
           pageFollowing = Math.floor((Math.random() * nFollowing) / 30)
         }
-
-        console.log('Page Following:', pageFollowing)
 
         const apiFollowing = `https://api.github.com/users/${userGithub}/following?page=${pageFollowing}`
         fetch(apiFollowing)

@@ -759,8 +759,10 @@ body.darkTheme .swal-text {
     right: 1.5rem;
     width: 3.2rem;
     height: 3.2rem;
+    padding-bottom: 0.4rem;
+    animation: display 0.8s;
   } 
-
+  
   main {
     width: 34.4rem;
     margin-top: 1.6rem;
@@ -852,8 +854,9 @@ body.darkTheme .swal-text {
 
   /* ===== OPEN MENU ===== */
   body.menuExtended main {
-    width: 100%;
-    margin: 0;
+   margin: 0;
+   width: 100vw;
+   transition: 0.5s;
   }
 
   body.menuExtended {
@@ -874,17 +877,32 @@ body.darkTheme .swal-text {
     height: 100vh;
   }
 
+  body #closeMenu {
+    padding-bottom: 0.4rem;
+  }  
+  
   body.menuExtended #closeMenu {    
     display: initial;
     position: absolute;
     right: 1.5rem;
     width: 3.2rem;
     height: 3.2rem;
-  } 
+    animation: display 0.8s;
+  }
+  
+  @keyframes display {
+    from {
+      opacity: 0;
+      transform: rotateX(0);
+    }
+    to {
+      transform: rotateX(185deg);
+      opacity: 1;
+    }
+  }
   
   body.menuExtended #menuButton {
-    opacity: 0;
-    visibility: visible;
+    display: none;
   }
 
   body.menuExtended .infoOrganization {
